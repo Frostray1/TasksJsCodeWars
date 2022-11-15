@@ -11,7 +11,6 @@
 // "recede"   =>  "()()()"
 // "Success"  =>  ")())())"
 // "(( @"     =>  "))(("
-
 function duplicateEncode(word) {
   word = word.toLowerCase();
 
@@ -45,7 +44,6 @@ function duplicateEncode(word) {
   text = array2.join("");
   return text;
 }
-
 // В порядке убывания
 //Ваша задача состоит в том, чтобы создать функцию, которая может принимать любое неотрицательное целое число в качестве аргумента и возвращать его с цифрами в порядке убывания.
 //По сути, переставьте цифры, чтобы получить максимально возможное число.
@@ -55,7 +53,6 @@ function duplicateEncode(word) {
 // Вход: 145263 Выход:654321
 
 // Вход: 123456789 Выход:987654321
-
 function descendingOrder(n) {
   const array = String(n).split("");
   array.sort(function (a, b) {
@@ -64,10 +61,24 @@ function descendingOrder(n) {
   n = +array.join("");
   return n;
 }
-
-descendingOrder(123456789);
-
-
+// 2 cтроки
+// Возьмите 2 строки s1и s2включите только буквы от aдо z. 
+// Возвращает новую отсортированную строку, максимально длинную, содержащую различные буквы (каждая из которых взята только один раз) из s1 или s2.
+// Примеры:
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+function longest(s1, s2) {
+  s1 = new Set(s1)
+  s2 = new Set(s2)
+  s1 = [...s1].join('')
+  s2 = [...s2].join('')
+  str = s1.concat(s2);
+  str = new Set(str)
+  str = [...str].join('')
+  let text = str.split('').sort().join('');
+  return text
+}
 
 
 
