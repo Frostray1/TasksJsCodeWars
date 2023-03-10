@@ -135,32 +135,32 @@ function squareDigits(num) {
   return +answer;
 }
 
-// function friend(friends) {
-//   const bestFriends = friends.filter((item) => item.length == 4);
+function friend(friends) {
+  const bestFriends = friends.filter((item) => item.length == 4);
 
-//   console.log(bestFriends);
+  console.log(bestFriends);
 
-//   return bestFriends;
-// }
+  return bestFriends;
+}
 
-// function validatePIN(pin) {
-//   console.log(/^\d+$/.test(pin));
-//   console.log(">0", pin >= 0);
-//   console.log("число", Number.isInteger(+pin));
-//   console.log("Без букв", !isNaN(pin));
-//   console.log("Либо 4 либо 6 ", pin.length === 4 || pin.length === 6);
-//   console.log("Целое ли число?", pin.indexOf(".") == -1);
-//   console.log("Финал ");
-//   console.log();
+function validatePIN(pin) {
+  console.log(/^\d+$/.test(pin));
+  console.log(">0", pin >= 0);
+  console.log("число", Number.isInteger(+pin));
+  console.log("Без букв", !isNaN(pin));
+  console.log("Либо 4 либо 6 ", pin.length === 4 || pin.length === 6);
+  console.log("Целое ли число?", pin.indexOf(".") == -1);
+  console.log("Финал ");
+  console.log();
 
-//   console.log(
-//     /^\d+$/.test(pin) &&
-//       Number.isInteger(+pin) &&
-//       !isNaN(pin) &&
-//       (pin.length === 4 || pin.length === 6)
-//       ? true
-//       : false
-//   );
+  console.log(
+    /^\d+$/.test(pin) &&
+      Number.isInteger(+pin) &&
+      !isNaN(pin) &&
+      (pin.length === 4 || pin.length === 6)
+      ? true
+      : false
+  );
 
   return pin > 0 &&
     Number.isInteger(+pin) &&
