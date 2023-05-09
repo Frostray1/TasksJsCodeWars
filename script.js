@@ -336,13 +336,13 @@
 // maps([1, 2, 3])
 
 
-function squareSum(numbers){
-  const sum = numbers.reduce(function (currentSum, currentNumber) {
-  return currentSum += Math.pow(currentNumber,2)
+// function squareSum(numbers){
+//   const sum = numbers.reduce(function (currentSum, currentNumber) {
+//   return currentSum += Math.pow(currentNumber,2)
   
-}, 0)
-  console.log(sum)
-}
+// }, 0)
+//   console.log(sum)
+// }
 
 
 squareSum([1,2])
