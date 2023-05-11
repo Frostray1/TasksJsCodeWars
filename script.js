@@ -311,38 +311,109 @@
 
 // positiveSum([1, -2, 3, 4, 5]); //13
 
-
-
-
 // function check(a, x) {
 //   console.log(a.indexOf(x)>=0 ? true:false)
 // //
 // }
 
-
 // check(['t', 'e', 's', 't'], '');
-
-
-
-
 
 // function maps(x){
 //   const x1 = x.map((elem)=>{
-//     console.log(elem*2) 
+//     console.log(elem*2)
 //   })
 // }
 
-
 // maps([1, 2, 3])
-
 
 // function squareSum(numbers){
 //   const sum = numbers.reduce(function (currentSum, currentNumber) {
 //   return currentSum += Math.pow(currentNumber,2)
-  
+
 // }, 0)
 //   console.log(sum)
 // }
 
+// squareSum([1,2])
 
-squareSum([1,2])
+// function spinWords(string) {
+//   let a = string.split(" ");
+
+//   let b = string.split(" ").map((item) => {
+//     if (item.length >= 5) {
+//       item.split('').reverse().join('')
+//     }
+//     console.log(item);
+//   });
+
+//   //
+// }
+
+// spinWords("This is another test"); // "This is rehtona test"
+
+// function getNumberOfGames(x) {
+//   let match = Math.floor(x / 2);
+//   let commands = x;
+//   let allMatch = 0;
+//   if (x <= 100 && x >= 1) {
+//     if (x % 2 === 0) {
+//       console.log("Четное = ", x);
+//       while (match != 1) {
+//         console.log("Проход  = ", 1);
+//         console.log("  ");
+
+//         match = Math.round((commands - 1) / 2);
+//         commands = Math.floor((commands - 1) / 2 + 1);
+//         allMatch += match;
+//         console.log("Матчей осталось = ", match);
+//         console.log("Команд = ", commands);
+//         console.log("________________");
+//       }
+//     } else {
+//       console.log("Нечетное = ", x);
+//       while (match != 1) {
+//         console.log("Проход  = ", 1);
+//         console.log("  ");
+
+//         match = Math.round((commands - 1) / 2);
+//         commands = Math.floor((commands - 1) / 2 + 1);
+//         allMatch += match;
+//         console.log("Матчей осталось = ", match);
+//         console.log("Команд = ", commands);
+//         console.log("________________");
+//       }
+//     }
+//   }
+
+//   console.log("Всего игр - ", allMatch);
+//   return allMatch;
+// }
+
+// getNumberOfGames();
+
+function getNumberOfGames(x) {
+  if (x <= 1 || x > 100) {
+    return 0;
+  }
+  let totalGames = 0;
+  while (x > 1) {
+    if (x % 2 === 0) {
+      totalGames += x / 2;
+      x /= 2;
+    } else {
+      totalGames += (x - 1) / 2;
+      x = (x - 1) / 2 + 1;
+    }
+  }
+  return totalGames;
+}
+
+// Примеры использования
+// console.log(getNumberOfGames(10));
+let allMatch = 0;
+for (let i = 2; i <= 100; i++) {
+  allMatch += getNumberOfGames(i);
+  console.log(i , '--',allMatch )
+}
+
+
