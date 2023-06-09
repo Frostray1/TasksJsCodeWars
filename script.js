@@ -391,29 +391,89 @@
 
 // getNumberOfGames();
 
-function getNumberOfGames(x) {
-  if (x <= 1 || x > 100) {
-    return 0;
-  }
-  let totalGames = 0;
-  while (x > 1) {
-    if (x % 2 === 0) {
-      totalGames += x / 2;
-      x /= 2;
-    } else {
-      totalGames += (x - 1) / 2;
-      x = (x - 1) / 2 + 1;
-    }
-  }
-  return totalGames;
+// function getNumberOfGames(x) {
+//   if (x <= 1 || x > 100) {
+//     return 0;
+//   }
+//   let totalGames = 0;
+//   while (x > 1) {
+//     if (x % 2 === 0) {
+//       totalGames += x / 2;
+//       x /= 2;
+//     } else {
+//       totalGames += (x - 1) / 2;
+//       x = (x - 1) / 2 + 1;
+//     }
+//   }
+//   return totalGames;
+// }
+
+// // Примеры использования
+// // console.log(getNumberOfGames(10));
+// let allMatch = 0;
+// for (let i = 2; i <= 100; i++) {
+//   allMatch += getNumberOfGames(i);
+//   console.log(i , '--',allMatch )
+// }
+
+// function friend(friends){
+//   console.log(friends.filter(name => name.match(/^[a-zA-Z]{4}$/)))
+//   return friends.filter(word => word.length <= 4)
+// }
+
+// friend(["Ryan", "Jimmy", "123", "4", "Cool Man"])
+
+// function findNeedle(haystack) {
+
+//   let a = String('found the needle at position '+haystack.indexOf('needle'))
+//   console.log(a)
+// }
+
+// findNeedle(['3', '123124234', undefined, 'needle', 'world', 'hay', 2, '3', true, false])
+
+// function disemvowel(str) {
+//   let disemvowel = (str) => str.replace(/[aeiouy]/gi, "");
+//   return(disemvowel(str))
+// }
+
+// console.log(disemvowel("No offense but,\nYour writing is among the worst I've ever read"))
+
+// Напишите функцию, которая определяет факт пересечения 2-х интервалов, наприсер (-2; 3) и [3:5]
+
+// function interval(array1, array2) {
+//   const length = array1.length + array2.length;
+//   const array3=[]
+//   const array4=[]
+//   for (let i = length; i >= 0; i--) {
+//     i < array1.length? array3.push(array1[i]):array4.push(array2[i])
+//     // if (i< array1.length ){
+//     //     array3.push(array1[i])
+//     //     array4.push(array2[i])
+//     // }else{
+//     //     if (i<array2.length ){
+//     //         array4.push(array2[i])
+//     //     }
+        
+//     // }
+
+
+//   }
+//   console.log(array3)
+//   console.log(array4)
+// }
+
+// interval([4, 3, 2, 1], [9, 8, 7, 6, 5, 4, 3]);
+
+
+
+
+function domainName(url){
+
+  const array = url.split('.')
+  console.log(array.indexOf('com'))
+  
+  console.log(array)
 }
 
-// Примеры использования
-// console.log(getNumberOfGames(10));
-let allMatch = 0;
-for (let i = 2; i <= 100; i++) {
-  allMatch += getNumberOfGames(i);
-  console.log(i , '--',allMatch )
-}
-
-
+domainName("http://google.com")
+domainName("www.xakep.ru")
